@@ -1,0 +1,24 @@
+
+body {
+    font-size: 16px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #cfdbe6
+}
+.header {
+    padding: 20px;
+    text-align: center;
+    background:#6f94b3;
+    color: black;
+    font-size: 20px;
+  }
+p { 
+    line-height: 1.5;
+    text-indent: 25px;
+}
+
+.center {
+    max-height: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
