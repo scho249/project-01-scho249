@@ -140,7 +140,6 @@ h2 {
     perspective: 1000px;
     padding: 5px;
 }
-
 .card {
     width: 100%;
     height: 100%;
@@ -165,7 +164,6 @@ h2 {
     transition: transform .6s;
     border-radius: 10px 10px 0px 0px;
 }
-
 .card h3 {
     text-align: center;
     flex-wrap: wrap;
