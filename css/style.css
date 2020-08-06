@@ -12,6 +12,7 @@ h1 {
 
 }
 
+
 body {
     font-family: 'Fira Sans', sans-serif;
     margin: 0;
@@ -106,6 +107,7 @@ main {
     flex-basis: 240px;
     padding: 1em;
     background-color:#bebebe;
+    height: 100%;
 }
 
 /* dashboard page*/
@@ -267,10 +269,6 @@ td {
     border-radius: 2px;
 } 
 
-/* footer index.html */
-#copyright {
-    text-align: right;
-}
 
 /*About page*/
 
@@ -296,3 +294,10 @@ td {
 }
 
 
+/* footer*/
+
+#copyright {
+    padding-top: 50px;
+    text-align: right;
+    color: #a9a9a9;
+}
