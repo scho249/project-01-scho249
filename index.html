@@ -4,7 +4,7 @@
 <head profile="http://www.w3.org/2005/10/profile">
         <link rel="icon" 
               type="image/png" 
-              href="img/logo.webp">
+              href="img/bucket.png">
 
     <meta charset="utf-8">
     <meta name="author" content="Seoyoung Cho, Ryan Kobashigawa">
@@ -15,105 +15,100 @@
      <!-- normalize.css for cross-browser stuff -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">   
     <!-- include required fonts -->  
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@900&family=PT+Serif&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <header>
-        <nav class="nav-header">
-            <div class="nav-header-container">
-                <div class="title-container">
-                    <img class="bucket icon" src="img/logo.webp" alt="bucket logo">
-                    <h1>Bucket List</h1>
-                    <div id="hamburger-menu"><a href="#"><i class="fa fa-bars" aria-label="menu"></i></a></div>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#"><span aria-hidden="true" class="logo">&nbsp;</span>Bucket List</a></li>
-            <li><a href="#courses">Dashboard</a></li>
-            <li><a href="#admissions">About</a></li>
-        </ul>
-        <!-- <div class="searchBox" role="search">
-            <input type="text" placeholder="Search...">
-            <button><i class="fas fa-search fa-rotate-90" aria-label="search"></i>
-            </button>
-        </div> -->
-    </nav>
-
+        <div class="topnav">
+            <img src="img/bucket.png" alt="logo">
+            <ul>
+                <li><a href="../project-01-scho249/index.html">Build Your List</a></li>
+                <li><a href="../project-01-scho249/dashboard.html">Search</a></li>
+                <li><a href="../project-01-scho249/about.html">Profile</a></li>
+            </ul>
+        </div>
     <main>
-
+        <section id="top">
+            <h1>Bucket List</h1>
+        </section>
     <!--Bucket List Table-->
-    <table>
-        <thead>
-            <tr>
-                <th scope="col">Rank</th>
-                <th scope="col">Activity Name</th>
-                <th scope="col">Location</th>
-                <th scope="col">Time</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>Go to Paris</td>
-                <td>France</td>
-                <td>3 years</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Learn to fly a plane</td>
-                <td>N/A</td>
-                <td>10 years</td>
-            </tr>
-        </tbody>
-      </table>
+    <div class="list-table">
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Rank</th>
+                    <th scope="col">Activity Name</th>
+                    <th scope="col">Location</th>
+                    <th scope="col">Finish By</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Go to Paris</td>
+                    <td>France</td>
+                    <td>1/1/2023</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Learn to fly a plane</td>
+                    <td>N/A</td>
+                    <td>1/1/2030</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Watch a NBA game</td>
+                    <td>Portland</td>
+                    <td>1/1/2021</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     <!--Form -->
     <!--Form Descritpion-->
-    <div class="container">
+    <div class="form-container">
         <h2>Add Bucket List Idea</h2> 
-        <p>Fill out form to add to your bucket list</p>
+        <p>Fill out the form to add to your bucket list</p>
     </div>
     <!-- Form Input-->
     <form>
-        <ul class="flex-outer">
+        <ul class="form-container">
           <li>
-            <label for="rank">Rank</label>
+            <label for="rank">Rank:</label>
             <input type="number" id="rank" placeholder="Enter rank">
           </li>
           <li>
-            <label for="activity-name">Activity Name</label>
+            <label for="activity-name">Activity Name:</label>
             <input type="text" id="activity-name" placeholder="Enter activity name here">
           </li>
           <li>
-            <label for="location">Location</label>
-            <input type="text" id="location" placeholder="Enter activity location here">
+            <label for="location">Location:</label>
+            <input type="text" id="location" placeholder="Enter location here">
           </li>
           <li>
-            <label for="date">Expected Finish Date</label>
+            <label for="date">Expected Finish Date:</label>
             <input type="date" id="date" placeholder="Enter expected finish date">
           </li>
           <li>
-            <label for="steps">Steps to Finish</label>
+            <label for="steps">Steps to Finish:</label>
             <textarea class="form-control" id="steps" name="Steps"></textarea>
           </li>
           <li>
-            <button type="submit">Submit <i class="fas fa-pencil-alt" aria-label="Submit"></i></button>
+            <button type="submit">SUBMIT<i class="fas fa-pencil-alt" aria-label="Submit"></i></button>
           </li>
         </ul>
       </form>
     </main> 
       <!-- Author Info -->
     <footer>
-        <p>Footer: Contact Us</p>
+        <!-- <p>Contact Us</p>
         <ul>
             <li>Ryan at <a href="kobasrya@uw.edu">kobasrya@uw.edu</a></li>
             <li>Seoyoung at <a href="@uw.edu">email@uw.edu</a></li>
-        </ul>
-        <p>&copy; 2020 Seoyoung Cho & Ryan Kobashigawa</p>
+        </ul> -->
+        <p id="copyright">&copy; 2020 Seoyoung Cho & Ryan Kobashigawa</p>
     </footer>
 </body>
 </html>

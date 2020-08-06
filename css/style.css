@@ -65,6 +65,22 @@ main {
     border-bottom-right-radius: 40px;
 }
 
+/* flex outer is part of index.html form*/
+.form-container li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border: 1px solid gray;
+    margin-bottom: 10px;
+    width: 500px;
+    justify-content: space-between;
+  }
+  /* also part of index.html form */
+  .form-container li:last-child {
+      border: none;
+  }
+
+
 /* About page side tab*/
 #side-tab ul {
     list-style: none;
@@ -194,6 +210,7 @@ table {
     margin-right: auto;
     margin-bottom: 30px;
 }
+
 th, td {
     border-bottom: 1px solid #ddd;
 }
@@ -207,13 +224,60 @@ td {
     padding: 1rem;
 }
 
+/* INDEX PAGE */
+
+/* index.html table*/ 
+.list-table {
+    margin-top: 3em;
+    margin-bottom: 50px;
+}
+
+.form-container {
+    padding: 0;
+    max-width: fit-content;
+    margin: auto;
+  }
+
+/* form description */ 
+.form-container p {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    text-align: center;
+}
+
+.form-container li label {
+    padding: 10px;
+    flex: 1 0 100px;
+}
+
+.form-container li input,.form-container li textarea {
+  padding: 10px;
+  border: black;
+}
+
+.form-container li textarea {
+    padding-left: 2em;
+}
+
+.form-container li button {
+    padding: 8px 16px;
+    background: black;
+    color: #f2f2f2;
+    border-radius: 2px;
+} 
+
+/* footer index.html */
+#copyright {
+    text-align: right;
+}
 
 /*About page*/
 
 #flex-container {
     display: flex;
     height: 100%;
-}
+} */
   
 
 #privacy {
@@ -230,3 +294,5 @@ td {
     margin-left: auto;
     margin-right: auto;
 }
+
+
