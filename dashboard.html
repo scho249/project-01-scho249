@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head profile="http://www.w3.org/2005/10/profile">
+        <link rel="icon" 
+              type="image/png" 
+              href="img/bucket.png">
+
     <meta charset="utf-8">
+    <meta name="author" content="Seoyoung Cho, Ryan Kobashigawa">
+    <meta name="description" content="search for ideas">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="css/style.css">
+
+     <!-- normalize.css for cross-browser stuff -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">   
+    <!-- include required fonts -->  
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="icon" href="img/bucket.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="topnav">
@@ -15,7 +25,7 @@
         <ul>
             <li><a href="../project-01-scho249/index.html">Build Your List</a></li>
             <li><a href="../project-01-scho249/dashboard.html">Search</a></li>
-            <li><a href="../project-01-scho249/profile.html">Profile</a></li>
+            <li><a href="../project-01-scho249/about.html">About Us</a></li>
         </ul>
     </div>
 
@@ -25,7 +35,6 @@
         <section id="top">
             <h1>Dashboard</h1>
             <section id="searchbox">
-
                 <div class="search">
                     <input type="text" class="input" placeholder="Search by keywords">
                     <button type="submit"><i class="fa fa-search"></i></button>
