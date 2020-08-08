@@ -82,32 +82,6 @@ main {
   }
 
 
-/* About page side tab*/
-#side-tab ul {
-    list-style: none;
-}
-
-#side-tab li {
-    margin-bottom: 20px;
-}
-
-
-#side-tab a {
-    text-decoration: none;
-    text-transform: uppercase;
-    border-bottom: 1px solid #a9a9a9;
-    padding: 10px;
-}
-
-#side-tab a:hover {
-    background-color: #a9a9a9;
-}
-
-#side-tab {
-    padding: 1em;
-    background-color:#bebebe; 
-    flex-grow: 1;
-}
 
 /* dashboard page*/
 
@@ -200,10 +174,43 @@ h2 {
     transform: rotateY(0deg);
 }
 
+
+
 .cardback {
     transform: rotateY(180deg);
     background-color: #fbfaf4;
 }
+
+.cardback .btn {
+    border-radius: 30%;
+    border: none;
+    margin-left: 100px;
+    margin-bottom: 30px;
+    width: 80px;
+    height: 40px;
+
+}
+
+.cardback ul {
+    list-style-type: none;
+    padding: 5px;
+}
+
+.cardback ul li {
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+
+.cardback ul li span {
+    font-weight: bold;
+}
+
+iframe {
+    width: 250px;
+    height: 250px;
+}
+
+
 
 table {
     width: 60%;
@@ -271,25 +278,57 @@ td {
 
 /*About page*/
 
-#flex-container {
-    display: flex;
+.side-tab {
     height: 100%;
-    flex-flow: row;
-    justify-content: space-around;
-} */
-  
+    width: 250px;
+    position: fixed;
+    overflow-x: hidden;
+    background-color:#bebebe;
 
-#privacy {
-    flex-basis: auto;
-    flex-grow: 1;
+}
+
+.side-tab a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color:#333333;
+    padding: 15px 0 15px 0px;
+    padding-left: 40%;
+    display: block;
+}
+.side-tab :first-child {
+    margin-top: 20px;
+}
+
+.side-tab a:focus {
+    color: #a9a9a9;
+    text-decoration: underline #a9a9a9;
+    
+}
+
+.side-tab a:hover {
+    color: #a9a9a9;
+}
+
+.side-tab :last-child:focus + .about {
+    display: block;
+}
+
+.privacy, .about {
+    margin-left: 250px;
     padding: 1em;
 }
 
-#privacy h2 {
+.about:active {
+    display:none;
+}
+
+
+
+.privacy h2, .about h2 {
     margin-left: 20px;
 }
 
-#privacy p {
+.privacy p, .about p {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
