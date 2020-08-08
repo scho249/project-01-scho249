@@ -104,10 +104,9 @@ main {
 }
 
 #side-tab {
-    flex-basis: 240px;
     padding: 1em;
-    background-color:#bebebe;
-    height: 100%;
+    background-color:#bebebe; 
+    flex-grow: 1;
 }
 
 /* dashboard page*/
@@ -275,11 +274,14 @@ td {
 #flex-container {
     display: flex;
     height: 100%;
+    flex-flow: row;
+    justify-content: space-around;
 } */
   
 
 #privacy {
-    flex: 1;
+    flex-basis: auto;
+    flex-grow: 1;
     padding: 1em;
 }
 
