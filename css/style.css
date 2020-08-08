@@ -48,10 +48,6 @@ main {
     text-transform: uppercase;
 }
 
-.topnav a:hover {
-    background-color: #FBE790;
-}
-
 .topnav img {
     max-height: 40px;
     padding-left: 10px;
@@ -66,6 +62,46 @@ main {
     border-bottom-right-radius: 40px;
 }
 
+/*side tab for about page*/
+.side-tab {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    overflow-x: hidden;
+    background-color:#bebebe;
+
+}
+
+.side-tab :first-child {
+    margin-top: 20px;
+}
+
+/* <a> */
+.side-tab a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color:#333333;
+    padding: 15px 0 15px 0px;
+    padding-left: 40%;
+    display: block;
+}
+.side-tab a:focus {
+    color: #a9a9a9;
+    text-decoration: underline #a9a9a9;
+    
+}
+
+.side-tab a:hover {
+    color: #a9a9a9;
+}
+
+.topnav a:hover {
+    background-color: #FBE790;
+}
+
+
+
+/*list items*/
 /* flex outer is part of index.html form*/
 .form-container li {
     display: flex;
@@ -75,11 +111,24 @@ main {
     margin-bottom: 10px;
     width: 500px;
     justify-content: space-between;
-  }
-  /* also part of index.html form */
-  .form-container li:last-child {
-      border: none;
-  }
+}
+  
+
+.cardback ul li {
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+
+
+/* also part of index.html form */
+.form-container li:last-child {
+    border: none;
+}
+
+
+.cardback ul li span {
+    font-weight: bold;
+}
 
 
 
@@ -182,13 +231,21 @@ h2 {
 }
 
 .cardback .btn {
-    border-radius: 30%;
-    border: none;
-    margin-left: 100px;
-    margin-bottom: 30px;
+    position: absolute;
+    border-radius: 20px;
+    bottom: 20px;
+    left: 50%;
+    margin-left:-40px;
     width: 80px;
     height: 40px;
+    border: none;
+    background-color: #d8eefd;
+    display: inline-block;
+    cursor: pointer;
+}
 
+.cardback .btn:hover {
+    background-color: #bedef3;
 }
 
 .cardback ul {
@@ -196,21 +253,11 @@ h2 {
     padding: 5px;
 }
 
-.cardback ul li {
-    margin-bottom: 15px;
-    margin-left: 15px;
-}
-
-.cardback ul li span {
-    font-weight: bold;
-}
 
 iframe {
     width: 250px;
     height: 250px;
 }
-
-
 
 table {
     width: 60%;
@@ -278,39 +325,9 @@ td {
 
 /*About page*/
 
-.side-tab {
-    height: 100%;
-    width: 250px;
-    position: fixed;
-    overflow-x: hidden;
-    background-color:#bebebe;
 
-}
-
-.side-tab a {
-    text-decoration: none;
-    text-transform: uppercase;
-    color:#333333;
-    padding: 15px 0 15px 0px;
-    padding-left: 40%;
-    display: block;
-}
-.side-tab :first-child {
-    margin-top: 20px;
-}
-
-.side-tab a:focus {
-    color: #a9a9a9;
-    text-decoration: underline #a9a9a9;
-    
-}
-
-.side-tab a:hover {
-    color: #a9a9a9;
-}
-
-.side-tab :last-child:focus + .about {
-    display: block;
+.about {
+    display:none;
 }
 
 .privacy, .about {
@@ -318,9 +335,13 @@ td {
     padding: 1em;
 }
 
-.about:active {
-    display:none;
+.side-tab :last-child:focus + .about {
+    display: block;
 }
+
+
+
+
 
 
 
@@ -333,6 +354,7 @@ td {
     margin-left: auto;
     margin-right: auto;
 }
+
 
 
 /* footer*/
