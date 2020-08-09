@@ -47,20 +47,25 @@ main {
 }
 
 .topnav a{
-    margin: 0 35px;
+    margin: 0 30px;
     text-decoration: none;
     text-transform: uppercase;
+    color: #8a8a8a;
 }
 
 .topnav img {
     max-height: 40px;
-    padding-left: 10px;
-    padding-right: 5px;
-    float: left;
+    margin-left: 20px;
+    margin-bottom: 10px;
 }
 
 #hamburger-menu {
     font-size: large;
+}
+
+#hamburger-menu a {
+    color: gray;
+    margin-left: 18px;
 }
 
 #top {
@@ -105,6 +110,11 @@ main {
 
 .topnav a:hover {
     background-color: #FBE790;
+}
+
+#hamburger-menu a:hover {
+    background-color: cornsilk;
+    color: #a9a9a9;
 }
 
 
@@ -181,7 +191,9 @@ h2 {
     padding-top: 20px;
 }
 
-
+/*flip card effect references: https://www.w3schools.com/howto/howto_css_flip_card.asp
+                               https://www.youtube.com/watch?v=uR7EbQImYmo
+                               https://davidwalsh.name/css-flip*/
 .container {
     width: 300px; 
     height: 450px;
@@ -215,7 +227,7 @@ h2 {
 .card h3 {
     text-align: center;
     flex-wrap: wrap;
-    padding: .5rem 1rem;
+    padding: 5px 1rem;
 }
 
 
@@ -263,8 +275,9 @@ h2 {
 
 
 iframe {
-    width: 250px;
-    height: 250px;
+    width: 90%;
+    height: 200px;
+    margin-left: 2%;
 }
 
 table {
@@ -303,14 +316,18 @@ td {
       content: counter(row-num) ". ";
   }
 
+
+
 .form-container {
     padding: 0;
-    max-width: fit-content;
-    margin: auto;
-  }
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
 
 /* form description */ 
-.form-container p {
+div.form-container p, div.form-container h2 {
     margin-left: auto;
     margin-right: auto;
     width: 90%;
@@ -336,6 +353,9 @@ td {
     background: black;
     color: #f2f2f2;
     border-radius: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
 } 
 
 
@@ -376,6 +396,44 @@ td {
     color: #a9a9a9;
 }
 
+/*small screen*/
+
+@media (max-width: 768px) {
+    main {
+        overflow-x: hidden;
+        font-size: 80%;
+    }
+
+    table {
+        width: 90%;
+    }
+
+    .search {
+        width: 80%;
+    }
+
+    .container {
+        width: 210px; 
+        height: 300px;
+    }
+
+    iframe {
+        height: 100px;
+    }
+
+    .side-tab {
+        display: none;
+    }
+
+    .about, .privacy {
+        display: inline;
+    }
+
+
+
+}
+
+
 /* medium screen (768px): no hamburger menu*/
 @media (min-width: 768px) {
 
@@ -390,6 +448,8 @@ td {
     .topnav img, .topnav ul {
         display: block;
     }
+
+
 }
 
 /* TODO: large screens (992) */
