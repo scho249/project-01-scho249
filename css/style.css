@@ -55,6 +55,12 @@ main {
     float: left;
 }
 
+/* don't show nav links on small screens*/
+/* TODO: change so logo shows up on small screens*/
+.topnav ul, .topnav img {
+    display: none;
+}
+
 #top {
     background-color: #bebebe;
     padding: 5px 0 20px 0;
@@ -285,7 +291,15 @@ td {
 .list-table {
     margin-top: 3em;
     margin-bottom: 50px;
+    counter-reset: row-num - 1;
 }
+/*auto increment row num* ref: https://infoheap.com/css-automatic-table-row-numbering/ */
+.list-table tr {
+    counter-increment: row-num;
+  }
+.list-table tr td:first-child::before {
+      content: counter(row-num) ". ";
+  }
 
 .form-container {
     padding: 0;
@@ -358,4 +372,15 @@ td {
     padding-top: 50px;
     text-align: right;
     color: #a9a9a9;
+}
+
+@media (min-width: 598px) {
+
+    #hamburger-menu {
+        display:none;
+    }
+
+    .topnav img, .topnav ul {
+        display: block;
+    }
 }
