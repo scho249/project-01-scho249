@@ -30,10 +30,14 @@ main {
 .topnav {
     background-color: cornsilk;
     padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .topnav ul {
     list-style: none;
+    display: none;
 }
 
 .topnav li {
@@ -55,10 +59,8 @@ main {
     float: left;
 }
 
-/* don't show nav links on small screens*/
-/* TODO: change so logo shows up on small screens*/
-.topnav ul, .topnav img {
-    display: none;
+#hamburger-menu {
+    font-size: large;
 }
 
 #top {
@@ -374,7 +376,12 @@ td {
     color: #a9a9a9;
 }
 
-@media (min-width: 598px) {
+/* medium screen (768px): no hamburger menu*/
+@media (min-width: 768px) {
+
+    .topnav {
+        justify-content: left;
+    }
 
     #hamburger-menu {
         display:none;
@@ -384,3 +391,5 @@ td {
         display: block;
     }
 }
+
+/* TODO: large screens (992) */
