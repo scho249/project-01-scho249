@@ -284,9 +284,6 @@ iframe {
     margin-left: 2%;
 }
 
-#searches h2 {
-    padding-bottom: 20px;
-}
 
 table {
     width: 60%;
@@ -362,6 +359,7 @@ td {
 }
 
 
+
 /* index page form description */ 
 div.form-container p, div.form-container h2 {
     margin-left: auto;
@@ -394,6 +392,9 @@ div.form-container p, div.form-container h2 {
     cursor: pointer;
 } 
 
+#searches h2 {
+    padding-bottom: 20px;
+}
 
 
 /* footer*/
