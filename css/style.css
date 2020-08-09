@@ -63,10 +63,6 @@ main {
     font-size: large;
 }
 
-#hamburger-menu a {
-    color: gray;
-    margin-left: 18px;
-}
 
 #top {
     background-color: #bebebe;
@@ -110,6 +106,11 @@ main {
 
 .topnav a:hover {
     background-color: #FBE790;
+}
+
+#hamburger-menu a {
+    color: gray;
+    margin-left: 18px;
 }
 
 #hamburger-menu a:hover {
@@ -326,7 +327,35 @@ td {
  }
 
 
-/* form description */ 
+/*About page*/
+
+
+.about {
+    display:none;
+}
+
+.privacy, .about {
+    margin-left: 250px;
+    padding: 1em;
+}
+
+.side-tab :last-child:focus + .about {
+    display: block;
+}
+
+
+.privacy h2, .about h2 {
+    margin-left: 20px;
+}
+
+.privacy p, .about p {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* index page form description */ 
 div.form-container p, div.form-container h2 {
     margin-left: auto;
     margin-right: auto;
@@ -357,34 +386,6 @@ div.form-container p, div.form-container h2 {
     margin-right: auto;
     cursor: pointer;
 } 
-
-
-/*About page*/
-
-
-.about {
-    display:none;
-}
-
-.privacy, .about {
-    margin-left: 250px;
-    padding: 1em;
-}
-
-.side-tab :last-child:focus + .about {
-    display: block;
-}
-
-
-.privacy h2, .about h2 {
-    margin-left: 20px;
-}
-
-.privacy p, .about p {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-}
 
 
 
