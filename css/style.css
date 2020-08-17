@@ -267,21 +267,18 @@ td {
 /*About page*/
 
 
-.about {
-    display:none;
-}
 
-.privacy, .about {
+.content {
     margin-left: 250px;
     padding: 1em;
-    display: inline;
+    
 }
 
-.privacy h2, .about h2 {
+.content h2 {
     margin-left: 20px;
 }
 
-.privacy p, .about p {
+.content p {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
@@ -437,14 +434,16 @@ footer {
     }
 
     /*About page*/
-
-    .about {
-        display:none;
-    }    
-    
-    .privacy {
+   
+    /*
+    .content {
         display: block;
     }
+
+    .content {
+        display: hidden;
+    }
+    */
 
 
     .side-tab {
@@ -470,21 +469,21 @@ footer {
         padding-left: 40%;
         display: block;
     }
+    /*
     .side-tab a:focus {
         color: #a9a9a9;
         text-decoration: underline #a9a9a9;
         
     }
+    */
     
     .side-tab a:hover {
         color: #a9a9a9;
-    }    
+    }  
+    
     
 
 
-    .side-tab :last-child:focus + .about {
-        display: block;
-    }
     
 
     

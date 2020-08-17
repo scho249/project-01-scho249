@@ -1,0 +1,103 @@
+[
+    {
+       "ideaName":"Camping at Acadia National Park",
+       "location":"Maine",
+       "season":"May-June, August-September",
+       "budget":"$22-40 per night",
+       "keyword":[
+          "Vacation",
+          "Activity"
+       ]
+    },
+    {
+       "ideaName":"Surfing at Black's Beach",
+       "location":"Black's Beack, CA",
+       "season":"May-June",
+       "budget":"-",
+       "keyword":[
+          "Summer",
+          "Ocean",
+          "Activity"
+       ]
+    },
+    {
+       "ideaName":"Going to Coachella",
+       "location":"Empire Polo Club, CA",
+       "season":"October 9th-18th",
+       "budget":"$329-929",
+       "keyword":[
+          "Music",
+          "Activity"
+       ]
+    },
+    {
+       "ideaName":"Hearb gardeing",
+       "location":"-",
+       "season":"April-May",
+       "budget":"-",
+       "keyword":[
+          "Wellness",
+          "Nature"
+       ]
+    },
+    {
+       "ideaName":"Watching baseball game",
+       "location":"-",
+       "season":"July-October",
+       "budget":"$70-140",
+       "keyword":[
+          "Sports",
+          "Activity"
+       ]
+    },
+    {
+       "ideaName":"Go vegan for one month",
+       "location":"-",
+       "season":"November-December",
+       "budget":"-",
+       "keyword":[
+          "Food",
+          "Habit"
+       ]
+    },
+    {
+       "ideaName":"Get a gym membership",
+       "location":"-",
+       "season":"June-September",
+       "budget":"$30-50",
+       "keyword":[
+          "Habit",
+          "Sports",
+          "Vacation"
+       ]
+    },
+    {
+       "ideaName":"Go to Paris",
+       "location":"Paris, France",
+       "season":"July-October",
+       "budget":"$500-1000",
+       "keyword":[
+          "Travel"
+       ]
+    },
+    {
+       "ideaName":"Learn to fly a plane",
+       "location":"-",
+       "season":"-",
+       "budget":"$50-500",
+       "keyword":[
+          "Learning",
+          "Goal"
+       ]
+    },
+    {
+       "ideaName":"Watch a NBA game",
+       "location":"-",
+       "season":"July-October",
+       "budget":"$70-140",
+       "keyword":[
+          "Sports",
+          "Activity"
+       ]
+    }
+ ]
