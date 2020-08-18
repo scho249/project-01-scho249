@@ -271,7 +271,7 @@ td {
 .content {
     margin-left: 250px;
     padding: 1em;
-    
+    display: inline;
 }
 
 .content h2 {
@@ -435,16 +435,18 @@ footer {
 
     /*About page*/
    
-    /*
+    
     .content {
         display: block;
     }
-
+    /*
     .content {
         display: hidden;
     }
     */
-
+    .content:last-of-type {
+        display: none;
+    }
 
     .side-tab {
         display: block;
@@ -468,6 +470,10 @@ footer {
         padding: 15px 0 15px 0px;
         padding-left: 40%;
         display: block;
+    }
+    .side-tab a:first-of-type {
+        color:#a9a9a9;
+        text-decoration: underline #a9a9a9;
     }
     /*
     .side-tab a:focus {

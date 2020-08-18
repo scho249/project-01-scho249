@@ -1,38 +1,56 @@
 'use strict'
 
+//const { renderSearchResults } = require("../../problem-set-06-scho249/problem-a/js");
 
+let allResults = [];
 //array of result ideas
-let jsonData1 = $.getJSON('js/results.json', function (data) {
-    console.log(jsonData1);
-}).fail(function(){
-    console.log("Error");
-});
-
-
-//let allResults = $.parseJSON(jsonData1);
-
-//array of all the keywords
-let jsonData2;
-$.getJSON('js/keywords.json', function (data) {
-    jsonData2 = data;
+$.getJSON('js/results.json', function (data) {
     console.log(data);
+    $.each(data, function(index, value) {
+        allResults.push({
+            ideaName : value.ideaName, 
+            location: value.location, 
+            season : value.season,
+            budget : value.budget, 
+            keywords : value.keywords});
+    });
 }).fail(function(){
     console.log("Error");
 });
 
-//let keywords = $.parseJSON(jsonData2);
+//console.log([{idea: "-", location: "-"}, {idea: "-", location: "-"}, {idea: "-", location: "-"}, {idea: "-", location: "-"}, {idea: "-", location: "-"}, {idea: "-", location: "-"}])
+
+console.log(allResults);
+allResults.forEach((obj) => {
+    console.log(obj);
+})
+
+let keywords = [];
+//array of all the keywords
 /*
-keywords = keywords.map((word) => {
-    word.toLowerCase();
+$.getJSON('js/keywords.json', function (data) {
+    console.log(data);
+    $.each(data, function(index, word) {
+        console.log(word);
+        keywords[index] = word;
+    })
+}).fail(function(){
+    console.log("Error");
 });
+
+
+
+
+keywords = keywords.forEach((word) => {
+    word = word.toLowerCase();
+});
+
+console.log(keywords);
+
 */
 
-function renderResult(data) {
-    data.forEach()
-}
 
-
-
+/*
 //event listener to search button
 let searchBtn = document.querySelector('button');
 searchBtn.addEventListener('click', (event) => {
@@ -102,16 +120,16 @@ function renderError(err) {
 
 
 
-
+*/
 
 //function to display side navigation content on click
 /*
+let firstC = document.querySelector('.content');
 let firstA = document.querySelector('.side-tab a');
-let secondA = document.querySelector('.content:last-of-type');
-firstA.style.color = '#a9a9a9';
-firstA.style.textDecoration = 'underline #a9a9a9';
-firstA.style.display = 'block';
-secondA.style.display = 'none';
+let lastC = document.querySelector('.content:last-of-type');
+let lastA = document.querySelector('.side-tab a:last-of-type');
+
+
 
 document.querySelectorAll('.side-tab a')[1].addEventListener('click', (event) => {
     event.preventDefault();
@@ -119,37 +137,17 @@ document.querySelectorAll('.side-tab a')[1].addEventListener('click', (event) =>
     document.querySelector('.content').style.display = 'none';
     document.querySelector('.side-tab a:last-of-type').style.color = '#a9a9a9';
     document.querySelector('.side-tab a:last-of-type').style.textDecoration = 'underline #a9a9a9';
-    document.querySelector('.side-tab a').style.color = 'black';
+    document.querySelector('.side-tab a').style.color = '#333333';
     document.querySelector('.side-tab a').style.textDecoration = 'none';
 })
 document.querySelectorAll('.side-tab a')[0].addEventListener('click', (event) => {
     event.preventDefault();
     document.querySelector('.content:last-of-type').style.display = 'none';
     document.querySelector('.content').style.display = 'block';
-    document.querySelector('.side-tab a:last-of-type').style.color = 'black';
+    document.querySelector('.side-tab a:last-of-type').style.color = '#333333';
     document.querySelector('.side-tab a:last-of-type').style.textDecoration = 'none';
     document.querySelector('.side-tab a').style.color = '#a9a9a9';
-    document.querySelector('.side-tab a').style.textDecoration = 'underline #a9a9a9';
-    
+    document.querySelector('.side-tab a').style.textDecoration = 'underline #a9a9a9';  
 })
-
-
-
-function toggleDisplay(element) {
-    if (element.style.display == 'none') {
-        element.style.display = 'block';
-    } else {
-        element.style.display = 'none';
-    }
-}
-
-function toggleTextDeco(element) {
-    if (element.style.color == 'black') {
-        element.style.color = '#a9a9a9';
-        element.style.textDecoration = 'underline #a9a9a9';
-    } else {
-        element.style.color = 'black';
-        element.style.textDecoration = 'none';
-    }
-}
 */
+
