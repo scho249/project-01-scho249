@@ -24,7 +24,28 @@ let keywords = $.getJSON('js/keywords.json', function () {
     });
 });
 
-
+if (document.querySelector('.side-tab a')) {
+    if (window.matchMedia('(min-width: 768px)')) {
+        document.querySelectorAll('.side-tab a')[1].addEventListener('click', (event) => {
+            event.preventDefault();
+            document.querySelector('.content:last-of-type').style.display = 'block';
+            document.querySelector('.content').style.display = 'none';
+            document.querySelector('.side-tab a:last-of-type').style.color = '#a9a9a9';
+            document.querySelector('.side-tab a:last-of-type').style.textDecoration = 'underline #a9a9a9';
+            document.querySelector('.side-tab a').style.color = '#333333';
+            document.querySelector('.side-tab a').style.textDecoration = 'none';
+        })
+        document.querySelectorAll('.side-tab a')[0].addEventListener('click', (event) => {
+            event.preventDefault();
+            document.querySelector('.content:last-of-type').style.display = 'none';
+            document.querySelector('.content').style.display = 'block';
+            document.querySelector('.side-tab a:last-of-type').style.color = '#333333';
+            document.querySelector('.side-tab a:last-of-type').style.textDecoration = 'none';
+            document.querySelector('.side-tab a').style.color = '#a9a9a9';
+            document.querySelector('.side-tab a').style.textDecoration = 'underline #a9a9a9';  
+        })
+    }
+}
 
 
 if (document.querySelector('button')) {
@@ -94,6 +115,47 @@ if (document.querySelector('button')) {
 
     }
 
+    
+
+    //Add button for cards
+    let addBtn = document.querySelectorAll('.cardback button');
+    for (let i = 0; i < addBtn.length; i++) {
+        addBtn[i].addEventListener('click', function(event) {
+            event.preventDefault();
+            this.innerHTML = 'Added!';
+            this.style.backgroundColor = '#bedef3';
+            findData(addBtn[i]);
+        })
+    }
+
+    let frontBtn = document.querySelectorAll('.cardfront button');
+    for (let i = 0; i < frontBtn.length; i++) {
+        frontBtn[i].addEventListener('click', (event) => {
+            event.preventDefault();
+            let icon = frontBtn[i].querySelector('i');
+            icon.className = "fa fa-check";
+            icon.style.color = '#90e390';
+            findData(addBtn[i]);
+        })
+    }
+
+    function findData(clickedBtn) {
+        let clickedCard = clickedBtn.parentElement.parentElement;
+        let clickedIdea = clickedCard.querySelector('h3').innerHTML;
+        for (let i = 0; i < allResults.responseJSON.length; i++) {
+            if (clickedIdea == allResults.responseJSON[i].ideaName) {
+                clickedIdea = allResults.responseJSON[i];
+            }
+        }
+        console.log(clickedIdea);
+        addToList(clickedIdea);
+    }
+
+    function addToList(ideaObj) {
+        //where the idea is added to the list
+    }
+
+    //functions for search form
     function keywordResult(resultArr) {
         let resultTable = document.createElement('table');
         let tableHead = document.createElement('thead');
@@ -151,70 +213,11 @@ if (document.querySelector('button')) {
         error.style.textAlign = 'center';
     }
 
-    //Add button for cards
-    let addBtn = document.querySelectorAll('.cardback button');
-    for (let i = 0; i < addBtn.length; i++) {
-        addBtn[i].addEventListener('click', function(event) {
-            event.preventDefault();
-            this.innerHTML = 'Added!';
-            this.style.backgroundColor = '#bedef3';
-            findData(addBtn[i]);
-        })
-    }
-
-    let frontBtn = document.querySelectorAll('.cardfront button');
-    for (let i = 0; i < frontBtn.length; i++) {
-        frontBtn[i].addEventListener('click', (event) => {
-            event.preventDefault();
-            let icon = frontBtn[i].querySelector('i');
-            icon.className = "fa fa-check";
-            icon.style.color = '#90e390';
-            findData(addBtn[i]);
-        })
-    }
-
-    function findData(clickedBtn) {
-        let clickedCard = clickedBtn.parentElement.parentElement;
-        let clickedIdea = clickedCard.querySelector('h3').innerHTML;
-        for (let i = 0; i < allResults.responseJSON.length; i++) {
-            if (clickedIdea == allResults.responseJSON[i].ideaName) {
-                clickedIdea = allResults.responseJSON[i];
-            }
-        }
-        console.log(clickedIdea);
-        addToList(clickedIdea);
-    }
-
-    function addToList(ideaObj) {
-        //where the idea is added to the list
-    }
-    
-
 }
 
 //function to display side navigation content on click
 
 
 
-if (document.querySelector('.side-tab a')) {
 
-    document.querySelectorAll('.side-tab a')[1].addEventListener('click', (event) => {
-        event.preventDefault();
-        document.querySelector('.content:last-of-type').style.display = 'block';
-        document.querySelector('.content').style.display = 'none';
-        document.querySelector('.side-tab a:last-of-type').style.color = '#a9a9a9';
-        document.querySelector('.side-tab a:last-of-type').style.textDecoration = 'underline #a9a9a9';
-        document.querySelector('.side-tab a').style.color = '#333333';
-        document.querySelector('.side-tab a').style.textDecoration = 'none';
-    })
-    document.querySelectorAll('.side-tab a')[0].addEventListener('click', (event) => {
-        event.preventDefault();
-        document.querySelector('.content:last-of-type').style.display = 'none';
-        document.querySelector('.content').style.display = 'block';
-        document.querySelector('.side-tab a:last-of-type').style.color = '#333333';
-        document.querySelector('.side-tab a:last-of-type').style.textDecoration = 'none';
-        document.querySelector('.side-tab a').style.color = '#a9a9a9';
-        document.querySelector('.side-tab a').style.textDecoration = 'underline #a9a9a9';  
-    })
-}
 

@@ -439,11 +439,7 @@ footer {
     .content {
         display: block;
     }
-    /*
-    .content {
-        display: hidden;
-    }
-    */
+
     .content:last-of-type {
         display: none;
     }
@@ -475,13 +471,7 @@ footer {
         color:#a9a9a9;
         text-decoration: underline #a9a9a9;
     }
-    /*
-    .side-tab a:focus {
-        color: #a9a9a9;
-        text-decoration: underline #a9a9a9;
-        
-    }
-    */
+
     
     .side-tab a:hover {
         color: #a9a9a9;
