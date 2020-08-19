@@ -9,7 +9,12 @@ header{
 
 h1 {
     margin-left: 30px;
+}
 
+h2 {
+    margin-left: 50px;
+    padding-top: 20px;
+    padding-bottom: 10px;
 }
 
 
@@ -24,6 +29,8 @@ body {
   
 main {
     flex: 1;
+    overflow-x: hidden;
+    font-size: 90%;
 }
 
 /*top navigation tab*/
@@ -46,7 +53,9 @@ main {
     border-right: 1px solid #FBE790;
 }
 
-.topnav a{
+.topnav ul a {
+    margin-left: 15px;
+    margin-right: 15px;
     text-decoration: none;
     text-transform: uppercase;
     color: #8a8a8a;
@@ -58,8 +67,8 @@ main {
 
 .topnav img {
     max-height: 40px;
-    margin-left: 20px;
     margin-bottom: 10px;
+    margin-left: 20px;
 }
 
 #hamburger-menu {
@@ -74,39 +83,13 @@ main {
 }
 
 /*side tab for about page*/
+
 .side-tab {
-    height: 100%;
-    width: 250px;
-    position: fixed;
-    overflow-x: hidden;
-    background-color:#bebebe;
-
+    display: none;
 }
 
-.side-tab :first-child {
-    margin-top: 20px;
-}
 
-/* <a> */
-.side-tab a {
-    text-decoration: none;
-    text-transform: uppercase;
-    color:#333333;
-    padding: 15px 0 15px 0px;
-    padding-left: 40%;
-    display: block;
-}
-.side-tab a:focus {
-    color: #a9a9a9;
-    text-decoration: underline #a9a9a9;
-    
-}
-
-.side-tab a:hover {
-    color: #a9a9a9;
-}
-
-.topnav a:hover {
+.topnav ul a:hover {
     background-color: #FBE790;
 }
 
@@ -134,23 +117,11 @@ main {
     /* width: 500px; */
     /* justify-content: space-between; */
 }
-  
-
-.cardback ul li {
-    margin-bottom: 15px;
-    margin-left: 15px;
-}
-
 
 /* also part of index.html form */
 .form-container li:last-child {
     border: none;
-}
-
-
-.cardback ul li span {
-    font-weight: bold;
-}
+}  
 
 
 
@@ -181,6 +152,10 @@ main {
 }
 
 
+/*flip card effect references: https://www.w3schools.com/howto/howto_css_flip_card.asp
+                               https://www.youtube.com/watch?v=uR7EbQImYmo
+                               https://davidwalsh.name/css-flip*/
+
 .card-section {
     box-sizing: border-box;
     display: flex;
@@ -188,31 +163,20 @@ main {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 30px;
 }
 
-h2 {
-    margin-left: 50px;
-    padding-top: 20px;
-}
-
-#suggestions {
-    margin-bottom: 30px;
-}
-
-/*flip card effect references: https://www.w3schools.com/howto/howto_css_flip_card.asp
-                               https://www.youtube.com/watch?v=uR7EbQImYmo
-                               https://davidwalsh.name/css-flip*/
 .container {
     width: 300px; 
     height: 450px;
-    perspective: 1000px;
     padding: 5px;
+    margin-left: auto; 
+    margin-right: auto;
+    margin-top: 10px;
 }
 .card {
     width: 100%;
     height: 100%;
-    transform-style: preserve-3d;
-    transition: transform .6s;
     border-radius: 10px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16),
                 0 1px 3px rgba(0, 0, 0, 0.23);
@@ -224,8 +188,6 @@ h2 {
 .card img {
     width: 100%;
     height: 80%;
-    transform-style: preserve-3d;
-    transition: transform .6s;
     border-radius: 10px 10px 0px 0px;
 }
 .card h3 {
@@ -234,61 +196,33 @@ h2 {
     padding: 5px 1rem;
 }
 
-
-.cardfront, .cardback {
+.cardfront{
     position: absolute;
     width: 100%;
     height: 100%;
-    backface-visibility: hidden;
     overflow: hidden;
 }
 
-.cardfront {
-    transform: rotateY(0deg);
-}
-
 .cardfront .btn {
-    display: none;
-}
-
-.cardback {
-    transform: rotateY(180deg);
-    background-color: #fbfaf4;
-}
-
-.cardback .btn {
+    display: block;
     position: absolute;
-    border-radius: 20px;
-    bottom: 20px;
-    left: 50%;
-    margin-left:-40px;
-    width: 80px;
+    top: 10px;
+    right: 10px;
+    border-radius: 50%;
+    width: 40px;
     height: 40px;
-    border: none;
-    background-color: #d8eefd;
-    display: inline-block;
+    background-color: #aaabac60;
+    color: white;
+    border: 3px solid white;
     cursor: pointer;
 }
 
-.cardback .btn:hover {
-    background-color: #bedef3;
-}
-
-.cardback ul {
-    list-style-type: none;
-    padding: 5px;
-}
-
-
 iframe {
-    width: 90%;
-    height: 200px;
-    margin-left: 2%;
+    display: none;
 }
-
 
 table {
-    width: 60%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
@@ -356,29 +290,23 @@ tr.strikeout td:after {
 /*About page*/
 
 
-.about {
-    display:none;
-}
 
-.privacy, .about {
+.content {
     margin-left: 250px;
     padding: 1em;
+    display: inline;
 }
 
-.side-tab :last-child:focus + .about {
-    display: block;
-}
-
-
-.privacy h2, .about h2 {
+.content h2 {
     margin-left: 20px;
 }
 
-.privacy p, .about p {
+.content p {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
 }
+
 
 
 
@@ -430,9 +358,6 @@ div.form-container p, div.form-container h2 {
     cursor: pointer;
 } 
 
-#searches h2 {
-    padding-bottom: 20px;
-}
 
 
 /* footer*/
@@ -443,59 +368,6 @@ footer {
     padding-right: 10px;
     text-align: right;
     color: #a9a9a9;
-}
-
-/*small screen*/
-
-@media (max-width: 768px) {
-    main {
-        overflow-x: hidden;
-        font-size: 90%;
-    }
-
-    table {
-        width: 90%;
-    }
-
-    .search {
-        width: 80%;
-    }
-
-
-    .container {
-        margin-left: auto; 
-        margin-right: auto;
-        margin-top: 10px;
-    }
-
-    .container h3 {
-        font-size: 18px;
-    }
-
-    .cardfront .btn {
-        display: block;
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        background-color: #aaabac60;
-        color: white;
-        border: 3px solid white;
-        cursor: pointer;
-    }
-
-    .side-tab {
-        display: none;
-    }
-
-    .about, .privacy {
-        display: inline;
-    }
-
-
-
 }
 
 
@@ -510,9 +382,85 @@ footer {
         display:none;
     }
 
-    .topnav img, .page-links {
+    .topnav img, .topnav ul {
         display: block;
     }
+
+    /*Dashboard page*/
+
+    .card-section {
+        justify-content: left;
+    }
+
+
+    .container {
+        perspective: 1000px;
+    }
+
+    .card {
+        transform-style: preserve-3d;
+        transition: transform .6s;
+    }
+    
+    .card img {
+        transform-style: preserve-3d;
+        transition: transform .6s;
+    }
+       
+    .cardfront, .cardback {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        overflow: hidden;
+    }
+    
+    .cardfront {
+        transform: rotateY(0deg);
+    }
+    
+    .cardfront .btn {
+        display: none;
+    }
+    
+    .cardback {
+        transform: rotateY(180deg);
+        background-color: #fbfaf4;
+    }
+    
+    .cardback .btn {
+        position: absolute;
+        border-radius: 20px;
+        bottom: 20px;
+        left: 50%;
+        margin-left:-40px;
+        width: 80px;
+        height: 40px;
+        border: none;
+        background-color: #d8eefd;
+        display: inline-block;
+        cursor: pointer;
+    }
+    
+    .cardback .btn:hover {
+        background-color: #bedef3;
+    }
+    
+    .cardback ul {
+        list-style-type: none;
+        padding: 5px;
+    }
+
+    .cardback ul li {
+        margin-bottom: 15px;
+        margin-left: 15px;
+    }
+    
+    
+    .cardback ul li span {
+        font-weight: bold;
+    }
+    
 
     .container:hover .card, .container.hover .card {
         transform: rotateY(180deg);
@@ -520,4 +468,71 @@ footer {
 
 }
 
-/* TODO: large screens (992) */
+
+/* medium screen (768px): no hamburger menu*/
+@media (min-width: 768px) {
+    iframe {
+        display: block;
+        width: 90%;
+        height: 200px;
+        margin-left: 2%;
+    }
+
+    table {
+        width: 60%;
+    }
+
+    /*About page*/
+   
+    
+    .content {
+        display: block;
+    }
+
+    .content:last-of-type {
+        display: none;
+    }
+
+
+    .side-tab {
+        display: block;
+        height: 100%;
+        width: 250px;
+        position: fixed;
+        overflow-x: hidden;
+        background-color:#bebebe;
+    
+    }
+    
+    .side-tab :first-child {
+        margin-top: 20px;
+    }
+    
+    /* <a> */
+    .side-tab a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color:#333333;
+        padding: 15px 0 15px 0px;
+        padding-left: 40%;
+        display: block;
+    }
+    .side-tab a:first-of-type {
+        color:#a9a9a9;
+        text-decoration: underline #a9a9a9;
+    }
+
+    
+    .side-tab a:hover {
+        color: #a9a9a9;
+    }  
+    
+    
+
+
+    
+
+    
+
+}
+
