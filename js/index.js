@@ -6,7 +6,7 @@ let allResults = $.getJSON('js/results.json', function () {
 }).done(function () {
     console.log("Have Data")
     console.log(allResults.responseJSON);
-    
+
     allResults.responseJSON.map((item) => {
         console.log(item);
     });
@@ -18,38 +18,50 @@ let keywords = $.getJSON('js/keywords.json', function () {
 }).done(function () {
     console.log("Have Data")
     console.log(keywords.responseJSON);
-    
+
     keywords.responseJSON.map((item) => {
         console.log(item);
     });
 });
 
+//click on top navigation icon directs to index.html (Build your list page)
+let logo = document.querySelector('.topnav img');
+
+
+//working on side tab - need to tidy up code
 if (document.querySelector('.side-tab a')) {
-    if (window.matchMedia('(min-width: 768px)')) {
-        document.querySelectorAll('.side-tab a')[1].addEventListener('click', (event) => {
-            event.preventDefault();
-            document.querySelector('.content:last-of-type').style.display = 'block';
-            document.querySelector('.content').style.display = 'none';
-            document.querySelector('.side-tab a:last-of-type').style.color = '#a9a9a9';
-            document.querySelector('.side-tab a:last-of-type').style.textDecoration = 'underline #a9a9a9';
-            document.querySelector('.side-tab a').style.color = '#333333';
-            document.querySelector('.side-tab a').style.textDecoration = 'none';
-        })
-        document.querySelectorAll('.side-tab a')[0].addEventListener('click', (event) => {
-            event.preventDefault();
-            document.querySelector('.content:last-of-type').style.display = 'none';
-            document.querySelector('.content').style.display = 'block';
-            document.querySelector('.side-tab a:last-of-type').style.color = '#333333';
-            document.querySelector('.side-tab a:last-of-type').style.textDecoration = 'none';
-            document.querySelector('.side-tab a').style.color = '#a9a9a9';
-            document.querySelector('.side-tab a').style.textDecoration = 'underline #a9a9a9';  
-        })
+    document.querySelectorAll('.side-tab a')[1].addEventListener('click', (event) => {
+        event.preventDefault();
+        document.querySelector('.content:last-of-type').style.display = 'block';
+        document.querySelector('.content').style.display = 'none';
+        document.querySelector('.side-tab a:last-of-type').style.color = '#a9a9a9';
+        document.querySelector('.side-tab a:last-of-type').style.textDecoration = 'underline #a9a9a9';
+        document.querySelector('.side-tab a').style.color = '#333333';
+        document.querySelector('.side-tab a').style.textDecoration = 'none';
+    })
+    document.querySelectorAll('.side-tab a')[0].addEventListener('click', (event) => {
+        event.preventDefault();
+        document.querySelector('.content:last-of-type').style.display = 'none';
+        document.querySelector('.content').style.display = 'block';
+        document.querySelector('.side-tab a:last-of-type').style.color = '#333333';
+        document.querySelector('.side-tab a:last-of-type').style.textDecoration = 'none';
+        document.querySelector('.side-tab a').style.color = '#a9a9a9';
+        document.querySelector('.side-tab a').style.textDecoration = 'underline #a9a9a9';
+    })
+
+}
+
+function toggleDisplay(content) {
+    if (content.style.display == 'block') {
+        content.style.display = 'none';
+    } else  if (content.style.display == 'none') {
+        content.style.display = 'block';
     }
 }
 
 
 if (document.querySelector('button')) {
-    
+
     //Dashboard page search form
     //event listener to search button
     let searchBtn = document.querySelector('button');
@@ -65,7 +77,7 @@ if (document.querySelector('button')) {
     let input = document.querySelector('#searchQuery');
     input.addEventListener('keyup', (event) => {
         event.preventDefault();
-        if(event.keyCode == 13) {
+        if (event.keyCode == 13) {
             searchBtn.click();
         }
     })
@@ -74,7 +86,7 @@ if (document.querySelector('button')) {
     //returns the search results with matching keyword
     function renderResult(keywordQuery) {
         let searchResults = document.querySelector("#results");
-        while(searchResults.hasChildNodes()) {
+        while (searchResults.hasChildNodes()) {
             searchResults.removeChild(searchResults.firstChild);
         }
         keywordQuery = keywordQuery.toLowerCase();
@@ -82,7 +94,7 @@ if (document.querySelector('button')) {
         console.log(keywords.responseJSON.includes(keywordQuery))
         if (!keywords.responseJSON.includes(keywordQuery)) {
             renderError(new Error("No Results Found. Try different keywords like below."));
-        }else {
+        } else {
             let resultArr = [];
             for (let i = 0; i < allResults.responseJSON.length; i++) {
                 allResults.responseJSON[i].keyword.forEach((word) => {
@@ -107,24 +119,22 @@ if (document.querySelector('button')) {
         borderSpan.style.border = 'none';
         borderSpan.style.height = '1.5px';
         borderSpan.style.margin = '100px auto 50px auto';
-        //borderSpan.style.marginRight = 'auto';
-        //borderSpan.style.marginLeft = 'auto';
-        //borderSpan.style.marginBottom = '50px;'
         borderSpan.style.background = '#333333';
         borderSpan.style.background = '-webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(#757575), to(#fff))';
 
     }
 
-    
+
 
     //Add button for cards
     let addBtn = document.querySelectorAll('.cardback button');
     for (let i = 0; i < addBtn.length; i++) {
-        addBtn[i].addEventListener('click', function(event) {
+        addBtn[i].addEventListener('click', function (event) {
             event.preventDefault();
             this.innerHTML = 'Added!';
             this.style.backgroundColor = '#bedef3';
             findData(addBtn[i]);
+
         })
     }
 
@@ -181,10 +191,10 @@ if (document.querySelector('button')) {
             console.log(idea);
             let trow = document.createElement('tr');
             let tidea = document.createElement('td');
-            tidea.innerHTML = idea.ideaName; 
+            tidea.innerHTML = idea.ideaName;
             console.log(tidea.innerHTML);
             let tloc = document.createElement('td');
-            tloc.innerHTML = idea.location;        
+            tloc.innerHTML = idea.location;
             console.log(tloc.innerHTML);
             let tsea = document.createElement('td');
             tsea.innerHTML = idea.season;
@@ -215,7 +225,6 @@ if (document.querySelector('button')) {
 
 }
 
-//function to display side navigation content on click
 
 
 

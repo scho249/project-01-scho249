@@ -53,7 +53,7 @@ main {
     border-right: 1px solid #FBE790;
 }
 
-.topnav a{
+.topnav ul a {
     margin-left: 15px;
     margin-right: 15px;
     text-decoration: none;
@@ -63,8 +63,8 @@ main {
 
 .topnav img {
     max-height: 40px;
-    margin-left: 20px;
     margin-bottom: 10px;
+    margin-left: 20px;
 }
 
 #hamburger-menu {
@@ -86,7 +86,7 @@ main {
 }
 
 
-.topnav a:hover {
+.topnav ul a:hover {
     background-color: #FBE790;
 }
 
@@ -348,6 +348,11 @@ footer {
     }
 
     /*Dashboard page*/
+
+    .card-section {
+        justify-content: left;
+    }
+
 
     .container {
         perspective: 1000px;
