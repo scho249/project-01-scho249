@@ -23,10 +23,10 @@
 <body>
   <div class="topnav">
     <img src="img/bucket.png" alt="logo">
-    <ul>
-      <li><a href="index.html">Build Your List</a></li>
-      <li><a href="dashboard.html">Search</a></li>
-      <li><a href="about.html">About Us</a></li>
+    <ul class="page-links">
+      <li><a href="../project-01-scho249/index.html">Build Your List</a></li>
+      <li><a href="../project-01-scho249/dashboard.html">Search</a></li>
+      <li><a href="../project-01-scho249/about.html">About Us</a></li>
     </ul>
     <div id="hamburger-menu"><a href="#"><i class="fa fa-bars" aria-label="menu"></i></a></div>
   </div>
@@ -35,7 +35,7 @@
       <h1>Bucket List</h1>
     </section>
     <!--Bucket List Table-->
-    <div class="list-table">
+    <!-- <div class="list-table">
       <table>
         <thead>
           <tr>
@@ -46,7 +46,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr class="strikeout">
             <td>Go to Paris</td>
             <td>5000</td>
             <td>France</td>
@@ -66,15 +66,15 @@
           </tr>
         </tbody>
       </table>
-    </div>
+    </div> -->
     <!--Form -->
     <!--Form Descritpion-->
     <div class="form-container">
       <h2>Add Bucket List Idea</h2>
-      <p>Fill out the form to add to your bucket list</p>
+      <p>Fill out the form to add to your bucket list. Click a bucket list item to cross it off your list</p>
     </div>
     <!-- Form Input-->
-    <form>
+    <!-- <form>
       <ul class="form-container">
         <li>
           <label for="activity-name">Activity Name:</label>
@@ -97,10 +97,13 @@
           <textarea class="form-control" id="steps" name="Steps"></textarea>
         </li>
         <li>
-          <button type="submit">SUBMIT<i class="fas fa-pencil-alt" aria-label="Submit"></i></button>
+          <button class="form-button" type="submit">SUBMIT<i class="fas fa-pencil-alt" aria-label="Submit"></i></button>
         </li>
       </ul>
-    </form>
+    </form> -->
+    <div id="app">
+    </div>
+    
     <footer>
       <!-- <p>Contact Us</p>
           <ul>
@@ -110,8 +113,8 @@
       <p id="copyright">&copy; 2020 Seoyoung Cho & Ryan Kobashigawa</p>
     </footer>
   </main>
-  <!--include js script-->
-  <script src="js/index.js"></script>
+   <!-- include JavaScript file -->
+   <script src="js/index.js"></script>
 </body>
 
 </html>

@@ -42,7 +42,7 @@ main {
     justify-content: space-between;
 }
 
-.topnav ul {
+.page-links {
     list-style: none;
     display: none;
 }
@@ -59,6 +59,10 @@ main {
     text-decoration: none;
     text-transform: uppercase;
     color: #8a8a8a;
+    
+        padding: 14px 16px;
+        font-size: 17px;
+        display: block;
 }
 
 .topnav img {
@@ -70,7 +74,6 @@ main {
 #hamburger-menu {
     font-size: large;
 }
-
 
 #top {
     background-color: #bebebe;
@@ -103,6 +106,7 @@ main {
 
 
 /*list items*/
+
 /* flex outer is part of index.html form*/
 .form-container li {
     display: flex;
@@ -110,8 +114,8 @@ main {
     align-items: center;
     border: 1px solid gray;
     margin-bottom: 10px;
-    width: 500px;
-    justify-content: space-between;
+    /* width: 500px; */
+    /* justify-content: space-between; */
 }
 
 /* also part of index.html form */
@@ -244,7 +248,8 @@ td {
     margin-top: 3em;
     margin-bottom: 50px;
     counter-reset: row-num - 1;
-    width:90%;
+    border-collapse: collapse; 
+    empty-cells: show;
 }
 /*auto increment row num* ref: https://infoheap.com/css-automatic-table-row-numbering/ */
 .list-table tr {
@@ -254,7 +259,24 @@ td {
       content: counter(row-num) ". ";
   }
 
+/* TEST */
 
+.list-table td { position: relative;
+}
+
+.list-table tr.strikeout td:before {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    border-bottom: 1px solid #111;
+    width: 100%;
+}
+
+tr.strikeout td:after {
+    content: "\00B7";
+    font-size: 1px;
+  }
 
 .form-container {
     padding: 0;
@@ -263,6 +285,7 @@ td {
     margin-right: auto;
  }
 
+ .font-strike { text-decoration: line-through; }
 
 /*About page*/
 
@@ -309,7 +332,23 @@ div.form-container p, div.form-container h2 {
     padding-left: 2em;
 }
 
-.form-container li button {
+/* TESTING 3*/
+.form-container > li > label {
+  flex: 1 0 120px;
+  max-width: 220px;
+}
+
+.form-container > li > label + * {
+  flex: 1 0 220px;
+}
+
+.form-container li p {
+  margin: 0;
+}
+
+
+
+.form-button {
     padding: 8px 16px;
     background: black;
     color: #f2f2f2;
@@ -427,6 +466,11 @@ footer {
         transform: rotateY(180deg);
     }
 
+}
+
+
+/* medium screen (768px): no hamburger menu*/
+@media (min-width: 768px) {
     iframe {
         display: block;
         width: 90%;
@@ -448,6 +492,7 @@ footer {
     .content:last-of-type {
         display: none;
     }
+
 
     .side-tab {
         display: block;
