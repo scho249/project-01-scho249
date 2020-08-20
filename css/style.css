@@ -42,6 +42,7 @@ main {
 
 .topnav .page-links {
     display: none;
+    padding-top: 10px;
 }
 
 .topnav img {
@@ -60,9 +61,6 @@ main {
     margin-top: 15px;
 }
 
-.topnav .page-links {
-    padding-top: 10px;
-}
 
 .topnav .page-links a {
     font-size: 16px;
@@ -93,9 +91,6 @@ main {
 .side-tab {
     display: none;
 }
-
-
-
 
 
 /*list items*/
@@ -196,19 +191,7 @@ main {
     overflow: hidden;
 }
 
-.cardfront .btn {
-    display: block;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    background-color: #aaabac60;
-    color: white;
-    border: 3px solid white;
-    cursor: pointer;
-}
+
 
 iframe {
     display: none;
@@ -418,11 +401,6 @@ footer {
         display: block;
     }
 
-    .topnav .page-links a {
-        float: left;
-        text-align: center;
-        border-right: solid rgb(247, 230, 164);
-    }
 
 
     /*Dashboard page*/
@@ -458,32 +436,12 @@ footer {
         transform: rotateY(0deg);
     }
     
-    .cardfront .btn {
-        display: none;
-    }
     
     .cardback {
         transform: rotateY(180deg);
         background-color: #fbfaf4;
     }
     
-    .cardback .btn {
-        position: absolute;
-        border-radius: 20px;
-        bottom: 20px;
-        left: 50%;
-        margin-left:-40px;
-        width: 80px;
-        height: 40px;
-        border: none;
-        background-color: #d8eefd;
-        display: inline-block;
-        cursor: pointer;
-    }
-    
-    .cardback .btn:hover {
-        background-color: #bedef3;
-    }
     
     .cardback ul {
         list-style-type: none;
@@ -554,6 +512,13 @@ footer {
         padding-left: 40%;
         display: block;
     }
+
+    .topnav .page-links a {
+        float: left;
+        text-align: center;
+        border-right: solid rgb(247, 230, 164);
+    }
+
     .side-tab a:first-of-type {
         color:#8f8f8f;
         text-decoration: underline #8f8f8f;

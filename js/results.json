@@ -1,130 +1,243 @@
 [
-    {
-       "ideaName":"Camping at Acadia National Park",
-       "location":"Maine",
-       "season":"May-June, August-September",
-       "budget":"$22-40 per night",
-       "keyword":[
-          "Vacation",
-          "Activity"
-       ]
-    },
-    {
-       "ideaName":"Surfing at Black's Beach",
-       "location":"Black's Beack, CA",
-       "season":"May-June",
-       "budget":"-",
-       "keyword":[
-          "Summer",
-          "Ocean",
-          "Activity"
-       ]
-    },
-    {
-       "ideaName":"Going to Coachella",
-       "location":"Empire Polo Club, CA",
-       "season":"October 9th-18th",
-       "budget":"$329-929",
-       "keyword":[
-          "Music",
-          "Activity"
-       ]
-    },
-    {
-       "ideaName":"Hearb gardeing",
-       "location":"-",
-       "season":"April-May",
-       "budget":"-",
-       "keyword":[
-          "Wellness",
-          "Nature"
-       ]
-    },
-    {
-       "ideaName":"Watching baseball game",
-       "location":"-",
-       "season":"July-October",
-       "budget":"$70-140",
-       "keyword":[
-          "Sports",
-          "Activity"
-       ]
-    },
-    {
-       "ideaName":"Go vegan for one month",
-       "location":"-",
-       "season":"November-December",
-       "budget":"-",
-       "keyword":[
-          "Food",
-          "Habit"
-       ]
-    },
-    {
-       "ideaName":"Get a gym membership",
-       "location":"-",
-       "season":"June-September",
-       "budget":"$30-50",
-       "keyword":[
-          "Habit",
-          "Sports",
-          "Vacation"
-       ]
-    },
-    {
-       "ideaName":"Go to Paris",
-       "location":"Paris, France",
-       "season":"July-October",
-       "budget":"$500-1000",
-       "keyword":[
-          "Travel"
-       ]
-    },
-    {
-       "ideaName":"Learn to fly a plane",
-       "location":"-",
-       "season":"-",
-       "budget":"$50-500",
-       "keyword":[
-          "Learning",
-          "Goal"
-       ]
-    },
-    {
-       "ideaName":"Watch a NBA game",
-       "location":"-",
-       "season":"July-October",
-       "budget":"$70-140",
-       "keyword":[
-          "Sports",
-          "Activity"
-       ]
-    },
-    {
-      "ideaName":"Get a tattoo",
-      "location":"-",
-      "season":"Winter",
-      "budget":"$50 + alpha",
-      "keyword":[
-         "Body"
+   {
+      "ideaName": "Camping at Acadia National Park",
+      "location": "Maine",
+      "season": "May-June, August-September",
+      "budget": "$22-40 per night",
+      "keyword": [
+         "Vacation",
+         "Activity"
       ]
    },
    {
-      "ideaName":"Bathe an Elephant",
-      "location":"Africa",
-      "season":"-",
-      "budget":"-",
-      "keyword":[
+      "ideaName": "Surfing at Black's Beach",
+      "location": "Black's Beack, CA",
+      "season": "May-June",
+      "budget": "-",
+      "keyword": [
+         "Summer",
+         "Ocean",
+         "Activity"
+      ]
+   },
+   {
+      "ideaName": "Going to Coachella",
+      "location": "Empire Polo Club, CA",
+      "season": "October 9th-18th",
+      "budget": "$329-929",
+      "keyword": [
+         "Music",
+         "Activity"
+      ]
+   },
+   {
+      "ideaName": "Hearb gardeing",
+      "location": "-",
+      "season": "April-May",
+      "budget": "-",
+      "keyword": [
+         "Wellness",
          "Nature"
       ]
    },
    {
-      "ideaName":"Going to amazon",
-      "location":"",
-      "season":"Winter",
-      "budget":"$50 + alpha",
-      "keyword":[
-         "body"
+      "ideaName": "Watching baseball game",
+      "location": "-",
+      "season": "July-October",
+      "budget": "$70-140",
+      "keyword": [
+         "Sports",
+         "Activity"
+      ]
+   },
+   {
+      "ideaName": "Go vegan for one month",
+      "location": "-",
+      "season": "November-December",
+      "budget": "-",
+      "keyword": [
+         "Food",
+         "Habit"
+      ]
+   },
+   {
+      "ideaName": "Get a gym membership",
+      "location": "-",
+      "season": "June-September",
+      "budget": "$30-50",
+      "keyword": [
+         "Habit",
+         "Sports",
+         "Vacation"
+      ]
+   },
+   {
+      "ideaName": "Go to Paris",
+      "location": "Paris, France",
+      "season": "July-October",
+      "budget": "$500-1000",
+      "keyword": [
+         "Travel"
+      ]
+   },
+   {
+      "ideaName": "Learn to fly a plane",
+      "location": "-",
+      "season": "-",
+      "budget": "$50-500",
+      "keyword": [
+         "Learning",
+         "Goal"
+      ]
+   },
+   {
+      "ideaName": "Watch a NBA game",
+      "location": "-",
+      "season": "July-October",
+      "budget": "$70-140",
+      "keyword": [
+         "Sports",
+         "Activity"
+      ]
+   },
+   {
+      "ideaName": "Get a tattoo",
+      "location": "-",
+      "season": "Winter",
+      "budget": "$50 + alpha",
+      "keyword": [
+         "Body"
+      ]
+   },
+   {
+      "ideaName": "Bathe an Elephant",
+      "location": "Africa",
+      "season": "-",
+      "budget": "-",
+      "keyword": [
+         "Nature"
+      ]
+   },
+   {
+      "ideaName": "Going to amazon",
+      "location": "-",
+      "season": "Winter",
+      "budget": "$50 + alpha",
+      "keyword": [
+         "Nature"
+      ]
+   },
+   {
+      "ideaName": "Meet someone famous",
+      "location": "-",
+      "season": "-",
+      "budget": "-",
+      "keyword": [
+         "Goal"
+      ]
+   },
+   {
+      "ideaName": "Buy a dream car",
+      "location": "-",
+      "season": "-",
+      "budget": "$100000",
+      "keyword": [
+         "Goal",
+         "Money"
+      ]
+   },
+   {
+      "ideaName": "Buy a house in 20s",
+      "location": "-",
+      "season": "-",
+      "budget": "$1000000",
+      "keyword": [
+         "Goal",
+         "Money"
+      ]
+   },
+   {
+      "ideaName": "Make a movie",
+      "location": "-",
+      "season": "-",
+      "budget": "-",
+      "keyword": [
+         "Goal",
+         "Learning",
+         "Movie"
+      ]
+   },
+   {
+      "ideaName": "Go on a spa trip",
+      "location": "Japan",
+      "season": "Winter",
+      "budget": "-",
+      "keyword": [
+         "Goal",
+         "Travel",
+         "Body"
+      ]
+   },
+   {
+      "ideaName": "Train trip in Europe",
+      "location": "Europe",
+      "season": "September-October",
+      "budget": "$500",
+      "keyword": [
+         "Travel",
+         "Autumn"
+      ]
+   },
+   {
+      "ideaName": "Learn karate",
+      "location": "-",
+      "season": "-",
+      "budget": "$50+",
+      "keyword": [
+         "Habit",
+         "Wellness",
+         "Sports"
+      ]
+   },
+   {
+      "ideaName": "Read 12 books a year",
+      "location": "-",
+      "season": "-",
+      "budget": "$50+",
+      "keyword": [
+         "Habit"
+      ]
+   },
+   {
+      "ideaName": "Get phD degree",
+      "location": "-",
+      "season": "-",
+      "budget": "-",
+      "keyword": [
+         "School",
+         "Career",
+         "Goal"
+      ]
+   },
+   {
+      "ideaName": "Become a CEO",
+      "location": "-",
+      "season": "-",
+      "budget": "-",
+      "keyword": [
+         "Career",
+         "Goal",
+         "Work"
+      ]
+   },
+   {
+      "ideaName": "Learn to play guitar",
+      "location": "-",
+      "season": "-",
+      "budget": "$500",
+      "keyword": [
+         "Goal",
+         "Music"
       ]
    }
- ]
+]
