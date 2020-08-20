@@ -303,116 +303,116 @@ if (document.querySelector('.form-container')) {
 
 }
 
-    //returns the search results with matching keyword
-    function renderResult(keywordQuery) {
-        let searchResults = document.querySelector("#results");
-        while (searchResults.hasChildNodes()) {
-            searchResults.removeChild(searchResults.firstChild);
-        }
-        keywordQuery = keywordQuery.toLowerCase();
-        console.log(keywordQuery);
-        console.log(keywords.responseJSON.includes(keywordQuery))
-        if (!keywords.responseJSON.includes(keywordQuery) && keywordQuery != 'all') {
-            renderError(new Error("No Results Found. Try different keywords like below."));
+//returns the search results with matching keyword
+function renderResult(keywordQuery) {
+    let searchResults = document.querySelector("#results");
+    while (searchResults.hasChildNodes()) {
+        searchResults.removeChild(searchResults.firstChild);
+    }
+    keywordQuery = keywordQuery.toLowerCase();
+    console.log(keywordQuery);
+    console.log(keywords.responseJSON.includes(keywordQuery))
+    if (!keywords.responseJSON.includes(keywordQuery) && keywordQuery != 'all') {
+        renderError(new Error("No Results Found. Try different keywords like below."));
+    } else {
+        let resultArr = [];
+        //if the user types in 'all', return all the ideas
+        if (keywordQuery == 'all') {
+            keywordResult(allResults.responseJSON);
         } else {
-            let resultArr = [];
-            //if the user types in 'all', return all the ideas
-            if (keywordQuery == 'all') {
-                keywordResult(allResults.responseJSON);
+            for (let i = 0; i < allResults.responseJSON.length; i++) {
+                allResults.responseJSON[i].keyword.forEach((word) => {
+                    if (word.toLowerCase() == keywordQuery) {
+                        resultArr.push(allResults.responseJSON[i]);
+                    }
+                })
+            }
+            console.log(resultArr);
+            if (resultArr.length < 1) {
+                renderError(new Error("No Results Found. Try different keywords like below."));
             } else {
-                for (let i = 0; i < allResults.responseJSON.length; i++) {
-                    allResults.responseJSON[i].keyword.forEach((word) => {
-                        if (word.toLowerCase() == keywordQuery) {
-                            resultArr.push(allResults.responseJSON[i]);
-                        }
-                    })
-                }
-                console.log(resultArr);
-                if (resultArr.length < 1) {
-                    renderError(new Error("No Results Found. Try different keywords like below."));
-                } else {
-                    keywordResult(resultArr);
-                }
+                keywordResult(resultArr);
             }
         }
-
-        searchResults.style.marginTop = '50px';
-        let borderSpan = document.createElement('span');
-        searchResults.appendChild(borderSpan);
-        borderSpan.style.display = 'block';
-        borderSpan.style.color = 'white';
-        borderSpan.style.border = 'none';
-        borderSpan.style.height = '1.5px';
-        borderSpan.style.margin = '100px auto 50px auto';
-        borderSpan.style.background = '#333333';
-        borderSpan.style.background = '-webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(#757575), to(#fff))';
-
     }
 
+    searchResults.style.marginTop = '50px';
+    let borderSpan = document.createElement('span');
+    searchResults.appendChild(borderSpan);
+    borderSpan.style.display = 'block';
+    borderSpan.style.color = 'white';
+    borderSpan.style.border = 'none';
+    borderSpan.style.height = '1.5px';
+    borderSpan.style.margin = '100px auto 50px auto';
+    borderSpan.style.background = '#333333';
+    borderSpan.style.background = '-webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(#757575), to(#fff))';
+
+}
 
 
 
 
-    //functions for dashboard page
 
-    //functions for search form
-    function keywordResult(resultArr) {
-        let resultTable = document.createElement('table');
-        let tableHead = document.createElement('thead');
-        let theadRow = document.createElement('tr');
-        let theadD1 = document.createElement('td');
-        theadD1.innerHTML = 'Idea';
-        theadRow.appendChild(theadD1);
-        let theadD2 = document.createElement('td');
-        theadD2.innerHTML = 'Location';
-        theadRow.appendChild(theadD2);
-        let theadD3 = document.createElement('td');
-        theadD3.innerHTML = 'Best Season';
-        theadRow.appendChild(theadD3);
-        let theadD4 = document.createElement('td');
-        theadD4.innerHTML = 'Expected Budget';
-        theadRow.appendChild(theadD4);
-        tableHead.appendChild(theadRow);
-        resultTable.appendChild(tableHead);
-        //putting results into table
-        let tableBody = document.createElement('tbody');
-        for (let i = 0; i < resultArr.length; i++) {
-            let idea = resultArr[i];
-            console.log(idea);
-            let trow = document.createElement('tr');
-            let tidea = document.createElement('td');
-            tidea.innerHTML = idea.ideaName;
-            console.log(tidea.innerHTML);
-            let tloc = document.createElement('td');
-            tloc.innerHTML = idea.location;
-            console.log(tloc.innerHTML);
-            let tsea = document.createElement('td');
-            tsea.innerHTML = idea.season;
-            let tbud = document.createElement('td');
-            tbud.innerHTML = idea.budget;
-            trow.appendChild(tidea);
-            trow.appendChild(tloc);
-            trow.appendChild(tsea);
-            trow.appendChild(tbud);
-            tableBody.appendChild(trow);
-        }
-        resultTable.appendChild(tableBody);
-        resultTable.style.width = '80%';
-        tableHead.style.backgroundColor = '#dbf1ff';
-        let count = document.createElement('p');
-        count.textContent = resultArr.length + " ideas found";
-        count.style.margin = '0 0 20px 10%';
-        document.querySelector('#results').appendChild(count);
-        document.querySelector('#results').appendChild(resultTable);
+//functions for dashboard page
+
+//functions for search form
+function keywordResult(resultArr) {
+    let resultTable = document.createElement('table');
+    let tableHead = document.createElement('thead');
+    let theadRow = document.createElement('tr');
+    let theadD1 = document.createElement('td');
+    theadD1.innerHTML = 'Idea';
+    theadRow.appendChild(theadD1);
+    let theadD2 = document.createElement('td');
+    theadD2.innerHTML = 'Location';
+    theadRow.appendChild(theadD2);
+    let theadD3 = document.createElement('td');
+    theadD3.innerHTML = 'Best Season';
+    theadRow.appendChild(theadD3);
+    let theadD4 = document.createElement('td');
+    theadD4.innerHTML = 'Expected Budget';
+    theadRow.appendChild(theadD4);
+    tableHead.appendChild(theadRow);
+    resultTable.appendChild(tableHead);
+    //putting results into table
+    let tableBody = document.createElement('tbody');
+    for (let i = 0; i < resultArr.length; i++) {
+        let idea = resultArr[i];
+        console.log(idea);
+        let trow = document.createElement('tr');
+        let tidea = document.createElement('td');
+        tidea.innerHTML = idea.ideaName;
+        console.log(tidea.innerHTML);
+        let tloc = document.createElement('td');
+        tloc.innerHTML = idea.location;
+        console.log(tloc.innerHTML);
+        let tsea = document.createElement('td');
+        tsea.innerHTML = idea.season;
+        let tbud = document.createElement('td');
+        tbud.innerHTML = idea.budget;
+        trow.appendChild(tidea);
+        trow.appendChild(tloc);
+        trow.appendChild(tsea);
+        trow.appendChild(tbud);
+        tableBody.appendChild(trow);
     }
+    resultTable.appendChild(tableBody);
+    resultTable.style.width = '80%';
+    tableHead.style.backgroundColor = '#dbf1ff';
+    let count = document.createElement('p');
+    count.textContent = resultArr.length + " ideas found";
+    count.style.margin = '0 0 20px 10%';
+    document.querySelector('#results').appendChild(count);
+    document.querySelector('#results').appendChild(resultTable);
+}
 
 
-    //error
-    function renderError(err) {
-        let error = document.createElement("h3");
-        error.classList = "alert alert-danger";
-        error.innerHTML = err.message.italics();
-        document.querySelector("#results").appendChild(error);
-        error.style.color = '#6699cc';
-        error.style.textAlign = 'center';
-    }
+//error
+function renderError(err) {
+    let error = document.createElement("h3");
+    error.classList = "alert alert-danger";
+    error.innerHTML = err.message.italics();
+    document.querySelector("#results").appendChild(error);
+    error.style.color = '#6699cc';
+    error.style.textAlign = 'center';
+}
