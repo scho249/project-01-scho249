@@ -25,29 +25,32 @@ let keywords = $.getJSON('js/keywords.json', function () {
 });
 
 //click on top navigation icon directs to index.html (Build your list page)
-let logo = document.querySelector('.topnav img');
+
 
 
 //working on side tab - need to tidy up code
 if (document.querySelector('.side-tab a')) {
-    document.querySelectorAll('.side-tab a')[1].addEventListener('click', (event) => {
-        event.preventDefault();
-        document.querySelector('.content:last-of-type').style.display = 'block';
-        document.querySelector('.content').style.display = 'none';
-        document.querySelector('.side-tab a:last-of-type').style.color = '#a9a9a9';
-        document.querySelector('.side-tab a:last-of-type').style.textDecoration = 'underline #a9a9a9';
-        document.querySelector('.side-tab a').style.color = '#333333';
-        document.querySelector('.side-tab a').style.textDecoration = 'none';
-    })
-    document.querySelectorAll('.side-tab a')[0].addEventListener('click', (event) => {
-        event.preventDefault();
-        document.querySelector('.content:last-of-type').style.display = 'none';
-        document.querySelector('.content').style.display = 'block';
-        document.querySelector('.side-tab a:last-of-type').style.color = '#333333';
-        document.querySelector('.side-tab a:last-of-type').style.textDecoration = 'none';
-        document.querySelector('.side-tab a').style.color = '#a9a9a9';
-        document.querySelector('.side-tab a').style.textDecoration = 'underline #a9a9a9';
-    })
+    if ($(window).width > '768px') {
+        document.querySelectorAll('.side-tab a')[1].addEventListener('click', (event) => {
+            event.preventDefault();
+            document.querySelector('.content:last-of-type').style.display = 'block';
+            document.querySelector('.content').style.display = 'none';
+            document.querySelector('.side-tab a:last-of-type').style.color = '#a9a9a9';
+            document.querySelector('.side-tab a:last-of-type').style.textDecoration = 'underline #a9a9a9';
+            document.querySelector('.side-tab a').style.color = '#333333';
+            document.querySelector('.side-tab a').style.textDecoration = 'none';
+            
+        })
+        document.querySelectorAll('.side-tab a')[0].addEventListener('click', (event) => {
+            event.preventDefault();
+            document.querySelector('.content:last-of-type').style.display = 'none';
+            document.querySelector('.content').style.display = 'block';
+            document.querySelector('.side-tab a:last-of-type').style.color = '#333333';
+            document.querySelector('.side-tab a:last-of-type').style.textDecoration = 'none';
+            document.querySelector('.side-tab a').style.color = '#a9a9a9';
+            document.querySelector('.side-tab a').style.textDecoration = 'underline #a9a9a9';
+        })
+    }
 
 }
 

@@ -440,7 +440,7 @@ footer {
 
     /*About page*/
    
-    
+    /*
     .content {
         display: block;
     }
@@ -448,6 +448,7 @@ footer {
     .content:last-of-type {
         display: none;
     }
+    */
 
     .side-tab {
         display: block;
