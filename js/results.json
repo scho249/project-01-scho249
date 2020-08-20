@@ -99,5 +99,32 @@
           "Sports",
           "Activity"
        ]
-    }
+    },
+    {
+      "ideaName":"Get a tattoo",
+      "location":"-",
+      "season":"Winter",
+      "budget":"$50 + alpha",
+      "keyword":[
+         "Body"
+      ]
+   },
+   {
+      "ideaName":"Bathe an Elephant",
+      "location":"Africa",
+      "season":"-",
+      "budget":"-",
+      "keyword":[
+         "Nature"
+      ]
+   },
+   {
+      "ideaName":"Going to amazon",
+      "location":"",
+      "season":"Winter",
+      "budget":"$50 + alpha",
+      "keyword":[
+         "body"
+      ]
+   }
  ]
