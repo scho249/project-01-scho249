@@ -1,4 +1,3 @@
-
 html {
     height: 100%;
 }
@@ -269,6 +268,7 @@ tr.strikeout td:after {
 .content {
     margin-left: 250px;
     padding: 1em;
+    display: initial;
 }
 
 .content h2 {
@@ -284,9 +284,7 @@ tr.strikeout td:after {
     width : 90%;
     margin-left: auto;
     margin-right: auto;
-    line-height: 22px;
 }
-
 
 
 .profile-container {
@@ -478,8 +476,6 @@ footer {
 
     /*About page*/
    
-<<<<<<< HEAD
-=======
     
     .content {
         display: block;
@@ -515,19 +511,23 @@ footer {
         padding-left: 40%;
         display: block;
     }
->>>>>>> 916198bf9d07daeddfe7110d742aa4c45eaf010d
 
- 
+    .topnav .page-links a {
+        float: left;
+        text-align: center;
+        border-right: solid rgb(247, 230, 164);
+    }
+
+    .side-tab a:first-of-type {
+        color:#8f8f8f;
+        text-decoration: underline #8f8f8f;
+    }
+
     
-        .topnav .page-links a {
-            float: left;
-            text-align: center;
-            border-right: solid rgb(247, 230, 164);
-        }
-
-}    
-
+    .side-tab a:hover {
+        color: #8f8f8f;
+    }  
     
 
 
-
+}  

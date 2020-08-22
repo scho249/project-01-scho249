@@ -1,6 +1,8 @@
 'use strict'
 
 //fetching local json data
+
+//allResults contains all the bucket list result ideas shown when user searches for keywords
 let allResults = $.getJSON('js/results.json', function () {
     console.log("Fetching Local File")
 }).done(function () {
@@ -12,7 +14,7 @@ let allResults = $.getJSON('js/results.json', function () {
     });
 });
 
-
+//keywords is the array of all the keywords available to be searched
 let keywords = $.getJSON('js/keywords.json', function () {
     console.log("Fetching Local File")
 }).done(function () {
@@ -24,14 +26,11 @@ let keywords = $.getJSON('js/keywords.json', function () {
     });
 });
 
-//click on top navigation icon directs to index.html (Build your list page)
 
 
 
-//working on side tab - need to tidy up code
 
-
-
+//side navigation tab in About page. Clicking on each link displays different content. 
 if (document.querySelector('.side-tab a')) {
     let aboutLink = document.querySelector('.side-tab a');
     let policyLink = document.querySelector('.side-tab a:last-of-type');
@@ -39,7 +38,7 @@ if (document.querySelector('.side-tab a')) {
     let policyC = document.querySelector('.content:last-of-type');
     document.querySelectorAll('.side-tab a')[1].addEventListener('click', (event) => {
         event.preventDefault();
-        policyC.classList.add() = 'block';
+        policyC.style.display = 'block';
         aboutC.style.display = 'none';
         policyLink.style.color = '#8f8f8f';
         policyLink.style.textDecoration = 'underline #8f8f8f';
@@ -70,10 +69,6 @@ if (document.querySelector('.side-tab a')) {
           });
     })
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 916198bf9d07daeddfe7110d742aa4c45eaf010d
 }
 // change display for privacy policy when page is resized
 function resize () {
@@ -90,6 +85,7 @@ function resize () {
             }
         });
 }
+
 
 if (document.querySelector('button')) {
 
@@ -118,6 +114,7 @@ if (document.querySelector('button')) {
 }
 
 
+//hamburger menu for mobile display width
 let hamburger = document.querySelector('.hamburger-menu');
 let links = document.querySelector('.page-links');
 
@@ -132,7 +129,6 @@ hamburger.addEventListener('click', (event) => {
 })
 
 
-/* your code goes here! */
 
 if (document.querySelector('.form-container')) {
     class Task {
@@ -317,6 +313,7 @@ if (document.querySelector('.form-container')) {
         }
     }
 
+    //sample bucket list ideas
     let taskListObj = new TaskList([
         new Task("Go to Paris", 1000, "Paris", "2020-09-20", true),
         new Task("Learn the guitar", 500, "Seattle", "2021-11-20", false)
@@ -327,8 +324,8 @@ if (document.querySelector('.form-container')) {
     let appObj = new App(appElem, taskListObj); //instantiates app
     appObj.render();
 
-
 }
+
 
 //returns the search results with matching keyword
 function renderResult(keywordQuery) {
@@ -364,6 +361,8 @@ function renderResult(keywordQuery) {
     }
 
     searchResults.style.marginTop = '50px';
+
+    //gradient line reference: https://jsfiddle.net/JoshMesser/55ZfK/
     let borderSpan = document.createElement('span');
     searchResults.appendChild(borderSpan);
     borderSpan.style.display = 'block';
@@ -382,7 +381,7 @@ function renderResult(keywordQuery) {
 
 //functions for dashboard page
 
-//functions for search form
+//creating a table from extracted result data that matches the user keyword query
 function keywordResult(resultArr) {
     let resultTable = document.createElement('table');
     let tableHead = document.createElement('thead');
@@ -427,14 +426,14 @@ function keywordResult(resultArr) {
     resultTable.style.width = '80%';
     tableHead.style.backgroundColor = '#dbf1ff';
     let count = document.createElement('p');
-    count.textContent = resultArr.length + " found";
+    count.textContent = resultArr.length + " ideas found";
     count.style.margin = '0 0 20px 10%';
     document.querySelector('#results').appendChild(count);
     document.querySelector('#results').appendChild(resultTable);
 }
 
 
-//error
+//function that displays the given error message
 function renderError(err) {
     let error = document.createElement("h3");
     error.classList = "alert alert-danger";
