@@ -39,7 +39,7 @@ if (document.querySelector('.side-tab a')) {
     let policyC = document.querySelector('.content:last-of-type');
     document.querySelectorAll('.side-tab a')[1].addEventListener('click', (event) => {
         event.preventDefault();
-        policyC.style.display = 'block';
+        policyC.classList.add() = 'block';
         aboutC.style.display = 'none';
         policyLink.style.color = '#8f8f8f';
         policyLink.style.textDecoration = 'underline #8f8f8f';
@@ -56,7 +56,6 @@ if (document.querySelector('.side-tab a')) {
         aboutLink.style.color = '#8f8f8f';
         aboutLink.style.textDecoration = 'underline #8f8f8f';
     })
-
 
 
 }
@@ -400,7 +399,7 @@ function keywordResult(resultArr) {
     resultTable.style.width = '80%';
     tableHead.style.backgroundColor = '#dbf1ff';
     let count = document.createElement('p');
-    count.textContent = resultArr.length + " ideas found";
+    count.textContent = resultArr.length + " found";
     count.style.margin = '0 0 20px 10%';
     document.querySelector('#results').appendChild(count);
     document.querySelector('#results').appendChild(resultTable);

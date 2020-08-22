@@ -269,7 +269,6 @@ tr.strikeout td:after {
 .content {
     margin-left: 250px;
     padding: 1em;
-    display: initial;
 }
 
 .content h2 {
@@ -285,7 +284,9 @@ tr.strikeout td:after {
     width : 90%;
     margin-left: auto;
     margin-right: auto;
+    line-height: 22px;
 }
+
 
 
 .profile-container {
@@ -477,59 +478,14 @@ footer {
 
     /*About page*/
    
+
+ 
     
-    .content {
-        display: block;
-    }
-
-    .content:last-of-type {
-        display: none;
-    }
-    
-
-
-    .side-tab {
-        display: block;
-        height: 100%;
-        width: 250px;
-        position: fixed;
-        overflow-x: hidden;
-        background-color:#bebebe;
-    
-    }
-    
-    .side-tab :first-child {
-        margin-top: 20px;
-    }
-    
-
-    /* <a> */
-    .side-tab a {
-        text-decoration: none;
-        text-transform: uppercase;
-        color:#333333;
-        padding: 15px 0 15px 0px;
-        padding-left: 40%;
-        display: block;
-    }
-
-    .topnav .page-links a {
-        float: left;
-        text-align: center;
-        border-right: solid rgb(247, 230, 164);
-    }
-
-    .side-tab a:first-of-type {
-        color:#8f8f8f;
-        text-decoration: underline #8f8f8f;
-    }
-
-    
-    .side-tab a:hover {
-        color: #8f8f8f;
-    }  
-    
-
+        .topnav .page-links a {
+            float: left;
+            text-align: center;
+            border-right: solid rgb(247, 230, 164);
+        }
 
 }    
 
