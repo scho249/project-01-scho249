@@ -45,7 +45,7 @@ if (document.querySelector('.side-tab a')) {
         policyLink.style.textDecoration = 'underline #8f8f8f';
         aboutLink.style.color = '#333333';
         aboutLink.style.textDecoration = 'none';
-
+        resize(); // call resize
     })
     document.querySelectorAll('.side-tab a')[0].addEventListener('click', (event) => {
         event.preventDefault();
@@ -55,13 +55,37 @@ if (document.querySelector('.side-tab a')) {
         policyLink.style.textDecoration = 'none';
         aboutLink.style.color = '#8f8f8f';
         aboutLink.style.textDecoration = 'underline #8f8f8f';
+        // same thing as resize function but for about form
+        window.addEventListener('resize', function(event){
+            event.preventDefault();
+            let policyC = document.querySelector('.content:last-of-type');
+            policyC.style.display = 'none'; // hide privacy policy (doesn't work)
+            let aboutC = document.querySelector('.content');
+            if(window.innerWidth < 768) {
+             aboutC.style.display = 'flex';
+             aboutC.setAttribute("style", "justify-content: center");
+            }else {
+                aboutC.style.display = 'block';
+            }
+          });
     })
 
-
-
 }
-
-
+// change display for privacy policy when page is resized
+function resize () {
+        window.addEventListener('resize', function(event){
+            event.preventDefault();
+            let aboutC = document.querySelector('.content');
+            aboutC.style.display = 'none'; // hide about section
+            let policyC = document.querySelector('.content:last-of-type');
+            if(window.innerWidth < 768) { // flex display for smaller screens
+                policyC.style.display = 'flex';
+                policyC.setAttribute("style", "justify-content: center");
+            }else {
+                policyC.style.display = 'block'; //block for larger screens
+            }
+        });
+}
 
 if (document.querySelector('button')) {
 
@@ -89,7 +113,6 @@ if (document.querySelector('button')) {
 
 }
 
-/* Ryan's code*/
 
 let hamburger = document.querySelector('.hamburger-menu');
 let links = document.querySelector('.page-links');
