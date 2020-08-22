@@ -478,6 +478,44 @@ footer {
 
     /*About page*/
    
+<<<<<<< HEAD
+=======
+    
+    .content {
+        display: block;
+    }
+
+    .content:last-of-type {
+        display: block;
+    }
+    
+
+
+    .side-tab {
+        display: block;
+        height: 100%;
+        width: 250px;
+        position: fixed;
+        overflow-x: hidden;
+        background-color:#bebebe;
+    
+    }
+    
+    .side-tab :first-child {
+        margin-top: 20px;
+    }
+    
+
+    /* <a> */
+    .side-tab a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color:#333333;
+        padding: 15px 0 15px 0px;
+        padding-left: 40%;
+        display: block;
+    }
+>>>>>>> 916198bf9d07daeddfe7110d742aa4c45eaf010d
 
  
     
